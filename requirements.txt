@@ -1,2 +1,2 @@
-yt-dlp==2024.12.13
+yt-dlp==2024.12.23
 dumb-init==1.2.5.post1
