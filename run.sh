@@ -8,7 +8,7 @@ while true ; do
       if [ -f "$dir/.channel" ]; then
             echo "Downloading $dir"
             cd "$dir" || exit
-            yt-dlp -i -N 20 --cookies "YT_COOKIES_PATH" --no-cache-dir --match-filter !is_live --no-playlist --download-archive ./.db -P 'temp:/tmp' -o '%(upload_date)s - %(channel)s - %(title)s [%(id)s].%(ext)s' "$(cat ./.channel)"
+            yt-dlp -i -N 20 --cookies "$YT_COOKIES_PATH" --no-cache-dir --match-filter !is_live --no-playlist --download-archive ./.db -P 'temp:/tmp' -o '%(upload_date)s - %(channel)s - %(title)s [%(id)s].%(ext)s' "$(cat ./.channel)"
             cd ..
         else
             echo ".channel not found in directory: $dir"
