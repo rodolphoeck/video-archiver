@@ -36,6 +36,8 @@ WORKDIR /downloads
 
 VOLUME ["/downloads"]
 
+VOLUME ["/cookies"]
+
 RUN dumb-init yt-dlp --version
 
 ENTRYPOINT ["dumb-init", "/run.sh"]
