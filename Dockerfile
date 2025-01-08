@@ -26,6 +26,7 @@ RUN set -x \
  && chmod 777 /.cache
 
 ENV SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+ENV YT_COOKIES_PATH=/cookie/cookies.file
 
 COPY run.sh /
 
